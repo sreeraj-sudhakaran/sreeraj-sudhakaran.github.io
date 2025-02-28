@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (card.getAttribute('data-category') === 'common' || card.getAttribute('data-category') === filterValue) {
                     card.style.display = 'block';
                 // } 
-                // else if(){
+                // else if(filterValue === 'all' && card.getAttribute('data-default') === 'true') {
                 //     card.style.display = 'block';
                 }else {
                     card.style.display = 'none';
@@ -108,56 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
-    // const skillsFilterButtons = document.querySelectorAll('.skills-filter-btn');
-    // const skillsCards = document.querySelectorAll('.skill-category');
-
-    // skillsFilterButtons.forEach(button => {
-    //     button.addEventListener('click', function() {
-    //         // Remove active class from all buttons
-    //         skillsFilterButtons.forEach(btn => btn.classList.remove('active'));
-
-    //         // Add active class to clicked button
-    //         this.classList.add('active');
-
-    //         const filterValue = this.getAttribute('data-filter');
-
-    //         skillsCards.forEach(card => {
-    //             if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-    //                 card.classList.remove('hidden');  // Use CSS class for smooth transition
-    //                 card.style.display = 'block';
-    //             } else {
-    //                 card.classList.add('hidden');
-    //                 card.style.display = 'none';
-    //             }
-    //         });
-    //     });
-    // });
-
-    // Contact form handling
-    // const contactForm = document.getElementById('contactForm');
     
-    // if (contactForm) {
-    //     contactForm.addEventListener('submit', function(e) {
-    //         e.preventDefault();
-            
-    //         // Get form data
-    //         const formData = {
-    //             name: document.getElementById('name').value,
-    //             email: document.getElementById('email').value,
-    //             subject: document.getElementById('subject').value,
-    //             message: document.getElementById('message').value
-    //         };
-            
-    //         // You would typically send this data to a server
-    //         console.log('Form submitted:', formData);
-            
-    //         // Show success message (in a real application)
-    //         alert('Thank you for your message! I will get back to you soon.');
-            
-    //         // Reset form
-    //         contactForm.reset();
-    //     });
-    // }
 
     document.getElementById('contactForm').addEventListener('submit', async function(e) {
         e.preventDefault();
