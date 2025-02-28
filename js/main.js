@@ -270,3 +270,22 @@ function type() {
 type();
 
 
+async function downloadFile(fileUrl) {
+    try {
+        const response = await fetch(fileUrl, { method: "HEAD" }); // Check if file exists
+
+        if (response.ok) {
+            const link = document.createElement("a");
+            link.href = fileUrl;
+            link.setAttribute("download", "");
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            alert("Download started successfully!");
+        } else {
+            alert("Error: The file does not exist or cannot be downloaded.");
+        }
+    } catch (error) {
+        alert("Error: Unable to start download. Please try again. \n" + error.message);
+    }
+}
