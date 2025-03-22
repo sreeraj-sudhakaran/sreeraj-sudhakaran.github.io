@@ -1,19 +1,43 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
-    const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    const logo = document.querySelectorAll('.logo');
     
-    menuToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
+    burger.addEventListener('click', () => {
+        
+        // Toggle Burger Animation
+        burger.classList.toggle('toggle');
+        // Toggle Navigation
+        navMenu.classList.toggle('nav-active');
+        
     });
-    
+
     // Close menu when clicking outside
     document.addEventListener('click', function(event) {
         if (!event.target.closest('.nav-menu') && !event.target.closest('.menu-toggle')) {
             navMenu.classList.remove('active');
+            burger.classList.remove('toggle');
         }
     });
+
+    // Close navbar when a link is clicked (mobile)
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('nav-active');
+            burger.classList.remove('toggle');
+        });
+    });
     
+    // Close navbar when the logo is clicked (mobile)
+    logo.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('nav-active');
+            burger.classList.remove('toggle');
+        });
+    });
+
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
