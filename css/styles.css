@@ -363,7 +363,7 @@ nav {
     gap: 50px;
 }
 
-.about-image {
+/* .about-image {
     flex: 1;
 }
 
@@ -371,15 +371,47 @@ nav {
     width: 100%;
     border-radius: 10px;
     box-shadow: var(--box-shadow);
+} */
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
+
+.img-container {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid var(--primary-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.img-container:hover img {
+    transform: scale(1.05);
+}
+
 
 .about-text {
     flex: 2;
 }
 
-.about-text p {
+/* .about-text p {
     margin-bottom: 15px;
     font-size: 1.1rem;
+} */
+
+.about-text p {
+    margin-bottom: 1rem;
+    color: #555;
 }
 
 /* Skills Section */
@@ -487,7 +519,7 @@ nav {
 .timeline-date {
     position: absolute;
     width: 100px;
-    height: 40px;
+    height: 45px;
     background-color: var(--primary-color);
     color: white;
     border-radius: 50%;
@@ -706,6 +738,9 @@ nav {
     margin-bottom: 20px;
     padding-bottom: 15px;
     border-bottom: 1px solid var(--border-color);
+    /* white-space: pre-wrap; */
+    word-break: break-word;
+    /* overflow-wrap: break-word; */
 }
 
 .contact-item:last-of-type {
@@ -800,6 +835,17 @@ nav {
 
 /* Responsive styles for contact section */
 @media (max-width: 768px) {
+
+    .img-container {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
     .contact-content {
         flex-direction: column;
     }
@@ -807,6 +853,13 @@ nav {
     .contact-info, 
     .contact-form {
         width: 100%;
+    }
+
+    .circle-map {
+        width: 100%;
+        max-width: none;
+        transform: translateX(0%);
+        margin: 0 auto;     /* Ensure it's centered horizontally */
     }
 
     .nav-menu {
@@ -841,37 +894,20 @@ nav {
     .burger {
         display: block;
     }
-    .fa-solid.fa-house {
+    .nav_list .remove-on-mobile {
         display: none;
     }
-    .fas.fa-user {
-        display: none;
-    }
-    .fas.fa-code {
-        display: none;
-    }
-    .fas.fa-briefcase {
-        display: none;
-    }
-    .fas.fa-graduation-cap {
-        display: none;
-    }
-    .fas.fa-project-diagram {
-        display: none;
-    }
-    .fas.fa-envelope {
-        display: none;
-    }
+    
 
-    .toggle .line1 {
+    .burger.active .line1 {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
     
-    .toggle .line2 {
+    .burger.active .line2 {
         opacity: 0;
     }
     
-    .toggle .line3 {
+    .burger.active .line3 {
         transform: rotate(45deg) translate(-5px, -6px);
     }
 }
@@ -988,7 +1024,7 @@ nav {
 
 .circle-map {
     width: 100%;
-    max-width: 300px;
+    max-width: 322px;
     /* height: 150px; */
     height: 60%;
     overflow: hidden;
@@ -996,7 +1032,7 @@ nav {
     /* border: 2px solid var(--primary-color); */
     /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
     position: relative;
-    transform: translateX(10%);
+    transform: translateX(0%);
 }
 .circle-map::after {
     content: '';
