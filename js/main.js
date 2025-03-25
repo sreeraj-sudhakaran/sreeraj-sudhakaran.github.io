@@ -8,25 +8,31 @@ document.addEventListener('DOMContentLoaded', function() {
     burger.addEventListener('click', () => {
         
         // Toggle Burger Animation
-        burger.classList.toggle('toggle');
+        burger.classList.toggle('active');
         // Toggle Navigation
         navMenu.classList.toggle('nav-active');
         
     });
 
+    // const burger_icon = document.querySelector('.burger');
+    // burger_icon.onclick = function() {
+    //         this.classList.toggle('active');
+    //         navMenu.classList.toggle('nav-active');
+    //     };
+
     // Close menu when clicking outside
-    document.addEventListener('click', function(event) {
-        if (!event.target.closest('.nav-menu') && !event.target.closest('.menu-toggle')) {
-            navMenu.classList.remove('active');
-            burger.classList.remove('toggle');
-        }
-    });
+    // document.addEventListener('click', function(event) {
+    //     if (!event.target.closest('.nav-menu') && !event.target.closest('.menu-toggle')) {
+    //         navMenu.classList.remove('nav-active');
+    //         burger.classList.remove('active');
+    //     }
+    // });
 
     // Close navbar when a link is clicked (mobile)
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('nav-active');
-            burger.classList.remove('toggle');
+            burger.classList.remove('active');
         });
     });
     
@@ -34,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     logo.forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('nav-active');
-            burger.classList.remove('toggle');
+            burger.classList.remove('active');
         });
     });
 
