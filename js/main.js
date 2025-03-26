@@ -140,7 +140,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
 
-    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    // document.getElementById('contact-form')
+    const contactForm = document.querySelector('.contact-form form');
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
     
         const formData = new FormData(this);
@@ -172,39 +174,60 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Skills marquee duplication for infinite loop
-    const marqueeContent = document.querySelector('.marquee-content');
+    // // Skills marquee duplication for infinite loop
+    // const marqueeContent = document.querySelector('.marquee-content');
     
-    if (marqueeContent) {
-        // Clone the marquee content
-        const clone = marqueeContent.cloneNode(true);
-        marqueeContent.appendChild(clone.children[0]);
+    // if (marqueeContent) {
+    //     // Clone the marquee content
+    //     const clone = marqueeContent.cloneNode(true);
+    //     // marqueeContent.appendChild(clone.children[0]);
+    //     marqueeContent.appendChild(clone);
+
         
-        // Double the content for seamless looping
-        const originalImages = marqueeContent.querySelectorAll('img');
-        originalImages.forEach(img => {
-            const clone = img.cloneNode(true);
-            marqueeContent.appendChild(clone);
-        });
-    }
+    //     // Double the content for seamless looping
+    //     const originalImages = marqueeContent.querySelectorAll('img');
+    //     if (marqueeContent.children.length === originalImages.length) {
+    //         originalImages.forEach(img => {
+    //             const clone = img.cloneNode(true);
+    //             marqueeContent.appendChild(clone);
+    //         });
+    //     }
+        
+    //     // originalImages.forEach(img => {
+    //     //     const clone = img.cloneNode(true);
+    //     //     marqueeContent.appendChild(clone);
+    //     // });
+    // }
+    
+
+    
     
     // Animate elements on scroll
-    const animateElements = document.querySelectorAll('.skill-category, .timeline-item, .project-card, .achievement-card');
+    const animateElements = document.querySelectorAll('.skill-category, .project-card, .achievement-card');
     
     // Function to check if element is in viewport
+    // function isInViewport(element) {
+    //     const rect = element.getBoundingClientRect();
+    //     return (
+    //         rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+    //         rect.bottom >= 0
+    //     );
+    // }
     function isInViewport(element) {
         const rect = element.getBoundingClientRect();
         return (
-            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.bottom >= 0
+            rect.top <= (window.innerHeight * 0.9) && // Trigger when 90% of viewport height
+            rect.bottom >= (window.innerHeight * 0.1) // Ensure 10% of element is visible
         );
     }
+    
     
     // Function to handle scroll animations
     function handleScrollAnimations() {
         animateElements.forEach(element => {
             if (isInViewport(element) && !element.classList.contains('animated')) {
                 element.classList.add('animated');
+                // , 'fade-in-up');
                 element.style.animation = 'fadeInUp 0.5s ease forwards';
             }
         });
@@ -224,7 +247,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        .skill-category, .timeline-item, .project-card, .achievement-card {
+        .skill-category, .project-card, .achievement-card {
             opacity: 0;
         }
     `;
@@ -234,32 +257,8 @@ document.addEventListener('DOMContentLoaded', function() {
     handleScrollAnimations();
     window.addEventListener('scroll', handleScrollAnimations);
 
-
     
 });
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     const tabBtns = document.querySelectorAll('.tab-btn');
-//     const skillsGrids = document.querySelectorAll('.skills-grid');
-    
-//     tabBtns.forEach(btn => {
-//         btn.addEventListener('click', function() {
-//             // Remove active class from all buttons and grids
-//             tabBtns.forEach(b => b.classList.remove('active'));
-//             skillsGrids.forEach(grid => grid.classList.remove('active'));
-            
-//             // Add active class to current button
-//             this.classList.add('active');
-            
-//             // Show corresponding grid
-//             const targetGrid = document.getElementById(this.getAttribute('data-target'));
-//             if (targetGrid) {
-//                 targetGrid.classList.add('active');
-//             }
-//         });
-//     });
-// });
-
 
 //handling multiple titles
 const titles = [
@@ -319,3 +318,149 @@ async function downloadFile(fileUrl) {
         alert("Error: Unable to start download. Please try again. \n" + error.message);
     }
 }
+
+// function generateCodeLines() {
+//     const codeLines = document.getElementById('codeLines');
+//     const codeSnippets = [
+//         // '// Embedded Systems Logic',
+//         '#define HIGH 1',
+//         '#define LOW 0',
+//         'void initMicrocontroller() {',
+//         '    configureGPIO(PIN_13, OUTPUT);',
+//         '}',
+        
+//         // '// Python Backend with Django',
+//         'from django.db import models',
+//         'class Project(models.Model):',
+//         '    name = models.CharField(max_length=100)',
+//         '    description = models.TextField()',
+    
+//         // '// AI/ML Model Training',
+//         'from sklearn.ensemble import RandomForestClassifier',
+//         'model = RandomForestClassifier(n_estimators=100)',
+//         'model.fit(X_train, y_train)',
+    
+//         // '// Realtime Data Processing',
+//         'sensor_data = read_sensor()',
+//         'processed_data = preprocess(sensor_data)',
+//         'send_to_cloud(processed_data)',
+    
+//         'if (cpu_usage > 80) {',
+//         '    optimizeThreads();',
+//         '}',
+        
+//         // '// Logging and Debugging',
+//         'import logging',
+//         'logging.basicConfig(level=logging.INFO)',
+//         'logging.info("System initialized successfully")',
+    
+//         // '// Problem-Solving Mindset',
+//         'while (challengesExist) {',
+//         '    findSolution();',
+//         '    implementSolution();',
+//         '}',
+//     ];
+
+//     for (let i = 0; i < 50; i++) {
+//         const line = document.createElement('div');
+//         line.classList.add('code-line');
+//         line.style.left = `${Math.random() * 100}%`;
+//         line.style.animationDelay = `${Math.random() * 10}s`;
+//         line.textContent = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
+//         codeLines.appendChild(line);
+//     }
+// }
+
+// generateCodeLines();
+
+
+function generateCodeLines() {
+    const codeLines = document.getElementById('codeLines');
+    const codeSnippets = [
+        '#define HIGH 1',
+        '#define LOW 0',
+        'void initMicrocontroller() {',
+        '    configureGPIO(PIN_13, OUTPUT);',
+        '}',
+        
+        'from django.db import models',
+        'class Project(models.Model):',
+        '    name = models.CharField(max_length=100)',
+        '    description = models.TextField()',
+    
+        'from sklearn.ensemble import RandomForestClassifier',
+        'model = RandomForestClassifier(n_estimators=100)',
+        'model.fit(X_train, y_train)',
+    
+        'sensor_data = read_sensor()',
+        'processed_data = preprocess(sensor_data)',
+        'send_to_cloud(processed_data)',
+    
+        'if (cpu_usage > 80) {',
+        '    optimizeThreads();',
+        '}',
+        
+        'import logging',
+        'logging.basicConfig(level=logging.INFO)',
+        'logging.info("System initialized successfully")',
+    
+        'while (challengesExist) {',
+        '    findSolution();',
+        '    implementSolution();',
+        '}',
+    ];
+
+    // Colors for syntax highlighting
+    const colors = {
+        'keyword': 'rgb(255, 99, 132)', // Keywords like 'if', 'import', etc.
+        'variable': 'rgb(100, 255, 210)', // Variables or constants like HIGH, LOW
+        'function': 'rgb(102, 204, 255)', // Function names like 'initMicrocontroller'
+        'string': 'rgb(255, 215, 0)', // Strings, often strings in code (e.g., 'System initialized')
+        'number': 'rgb(144, 238, 144)', // Numbers or other literals
+        'default': 'white'
+    };
+
+    // Function to escape HTML characters
+    function escapeHTML(text) {
+        return text.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+
+    for (let i = 0; i < 50; i++) {
+        const line = document.createElement('div');
+        line.classList.add('code-line');
+        line.style.left = `${Math.random() * 100}%`;
+        line.style.animationDelay = `${Math.random() * 10}s`;
+
+        // Choose a random snippet
+        let snippet = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
+
+        // Create a span for each part of the code for syntax highlighting
+        let coloredLine = document.createElement('span');
+
+        // Apply syntax highlighting to different code parts
+        snippet.split(' ').forEach((word) => {
+            let span = document.createElement('span');
+            // Applying different color for different parts
+            if (/(void|from|class|if|import|while|def|return)/g.test(word)) {
+                span.style.color = colors['keyword'];
+            } else if (/\d+/g.test(word)) {
+                span.style.color = colors['number'];
+            } else if (/".*"/g.test(word)) {
+                span.style.color = colors['string'];
+            } else if (/\(/.test(word)) {
+                span.style.color = colors['function'];
+            } else {
+                span.style.color = colors['variable'];
+            }
+
+            span.textContent = `${word} `;
+            coloredLine.appendChild(span);
+        });
+
+        line.appendChild(coloredLine);
+        codeLines.appendChild(line);
+    }
+}
+
+generateCodeLines();
+
