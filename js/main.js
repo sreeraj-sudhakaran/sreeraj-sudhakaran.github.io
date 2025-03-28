@@ -107,6 +107,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     card.style.display = 'none';
                 }
+                card.classList.add('animated');
+                card.style.animation = 'fadeInUp 0.5s ease forwards';
             });
         });
     });
