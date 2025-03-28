@@ -307,7 +307,8 @@ nav {
     line-height: 1.2;
 } */
 
-@keyframes flicker {
+/*heading flicker and glitch effect*/
+/* @keyframes flicker {
     0% { opacity: 0.8; }
     20% { opacity: 0.6; }
     40% { opacity: 1; }
@@ -332,13 +333,41 @@ nav {
 }
 
 .hero h1 {
-    font-size: clamp(2.5rem, 8vw, 4rem); /* Responsive font size */
+    font-size: clamp(2.5rem, 8vw, 4rem);
     margin-bottom: 15px;
     line-height: 1.2;
-    animation: flicker 1.5s infinite alternate ease-in-out,
-               glitch 0.3s infinite alternate;
-               /* glitch-slice 1s infinite linear; */
+    animation: flicker 2s infinite alternate ease-in-out,
+               glitch 1.5s infinite alternate;
     position: relative;
+} */
+@keyframes flicker {
+    0% { opacity: 0.8; }
+    20% { opacity: 0.6; }
+    40% { opacity: 1; }
+    60% { opacity: 0.7; }
+    80% { opacity: 1; }
+    90% { opacity: 0.9; }
+    100% { opacity: 0.9; } /* Hold state for pause */
+}
+
+@keyframes glitch {
+    0% { text-shadow: 2px 2px red, -2px -2px blue; transform: translate(0, 0); }
+    25% { text-shadow: -2px -2px red, 2px 2px blue; transform: translate(-1px, 1px); }
+    50% { text-shadow: 2px -2px red, -2px 2px blue; transform: translate(1px, -1px); }
+    75% { text-shadow: -2px 2px red, 2px -2px blue; transform: translate(-1px, -1px); }
+    90% { text-shadow: 2px 2px red, -2px -2px blue; transform: translate(0, 0); }
+    100% { text-shadow: none; } /* Hold state for pause */
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    margin-bottom: 15px;
+    line-height: 1.2;
+    position: relative;
+
+    /* Extended animation duration: 6s for 2 cycles + 4s pause */
+    animation: flicker 6s infinite steps(2, end),
+               glitch 6s infinite steps(2, end);
 }
 
 
@@ -401,7 +430,7 @@ nav {
 .dropdown {
     position: relative;
     display: inline-block;
-    margin-left: 15px;
+    /* margin-left: 15px; */
     z-index: 5; /* Ensure it's above .code-background but below .dropdown-content */
 }
 
@@ -521,6 +550,31 @@ nav {
     justify-content: center;
 }
 
+.about-tags {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.tags {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    background-color: #e6e6e6;
+    padding: 5px 10px;
+    border-radius: 15px;
+    
+}
+
+.tags i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    
+}
+
+
 .img-container {
     width: 300px;
     height: 300px;
@@ -546,14 +600,10 @@ nav {
     flex: 2;
 }
 
-/* .about-text p {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-} */
-
 .about-text p {
     margin-bottom: 1rem;
     color: #555;
+    text-align: justify;
 }
 
 /* Skills Section */
@@ -573,6 +623,7 @@ nav {
     cursor: pointer;
     border-radius: 20px;
     transition: var(--transition);
+    border: 2px solid var(--secondary-color);
 }
 
 .skills-filter-btn.active, .filter-btn:hover {
@@ -649,7 +700,8 @@ nav {
     position: absolute;
     min-width: 70px;
     height: 35px;
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
+    background-color: #487db3fb;
     color: white;
     /* border-radius: 50%; */
     border-radius: 10px; /* Rounded corners */
@@ -682,6 +734,7 @@ nav {
 
 .timeline-content ul li {
     margin-bottom: 8px;
+    text-align: justify;
 }
 
 /* Projects Section */
@@ -700,6 +753,7 @@ nav {
     cursor: pointer;
     border-radius: 20px;
     transition: var(--transition);
+    border: 2px solid var(--secondary-color);
 }
 
 .filter-btn.active, .filter-btn:hover {
@@ -1266,6 +1320,9 @@ footer {
     align-items: center; */
         row-gap: 15px; /* Maintain consistent spacing */
     }
+    /* .dropdown {
+        margin-left: 0px;
+    } */
 
 }
 
