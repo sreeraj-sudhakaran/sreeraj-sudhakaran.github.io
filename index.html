@@ -46,8 +46,8 @@
         <section id="home" class="hero">
             <div class="container">
                 
-        <div class="code-background"></div>
-        <div class="code-lines" id="codeLines"></div>
+                <div class="code-background"></div>
+                <div class="code-lines" id="codeLines"></div>
                 <h1 class="glitch">Sreeraj Sudhakaran</h1>
                 <h2 id="dynamic-title">Software Engineer</h2>
                 <!-- <p>Transforming ideas into smart solutions</p> -->
@@ -59,8 +59,6 @@
                     <div class="dropdown">
                         <button class="btn primary dropdown-btn">Download Resume ▼</button>
                         <div class="dropdown-content">
-                            <!-- <a href="resume/SreerajSudhakaran_Embedded.pdf" download>Embedded Resume</a>
-                            <a href="resume/SreerajSudhakaran_Python.pdf" download>Python Resume</a> -->
                             <a href="#" onclick="downloadFile('resume/SreerajSudhakaran_Embedded.pdf')">Embedded Resume</a>
                             <a href="#" onclick="downloadFile('resume/SreerajSudhakaran_Python.pdf')">Python Resume</a>
                         </div>
@@ -192,6 +190,20 @@
                         <p>Hello! I'm a Software Engineer with over 5 years of experience in embedded systems and Python development. I specialize in developing firmware for ARM-based microcontrollers using C/C++, as well as building scalable Python applications, APIs, and automation workflows. My work spans low-level driver development, real-time embedded systems, and cloud-integrated solutions, making me comfortable across both hardware and software domains.</p>
                         <p>I enjoy tackling complex challenges, whether optimizing memory-constrained embedded firmware or developing Python-based microservices for data processing and analytics. Passionate about IoT, AI, and automation, I am always exploring new ways to bridge the gap between embedded systems and high-level applications.</p>
                         <p>Let’s connect and collaborate on innovative solutions that merge the best of both worlds! 🚀</p>
+                        <div class="about-tags">
+                            <div class="tags">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Bachelor's in Electronics Engineering</span>
+                            </div>
+                            <div class="tags">
+                                <i class="fas fa-briefcase"></i>
+                                <span>5+ Years Experience</span>
+                            </div>
+                            <div class="tags">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Toronto, ON</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -213,19 +225,19 @@
                 <!-- All Skills Combined -->
                 <div class="skills-grid">
                     <!-- programming languages -->
-                    <div class="skill-category" data-category="common">
+                    <div class="skill-category" data-category="embedded-skills python-skills">
                         <div class="skill-icon">
                             <i class="fas fa-code"></i>
                         </div>
                         <h3 class="">Programming Languages</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">C</span>
-                            <span class="skill-tag">C++</span>
-                            <span class="skill-tag">Assembly</span>
-                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag" data-category="embedded-skills">C</span>
+                            <span class="skill-tag" data-category="embedded-skills">C++</span>
+                            <span class="skill-tag" data-category="embedded-skills">Assembly</span>
+                            <span class="skill-tag" data-category="common-skills">Python</span>
                             <span class="skill-tag" data-category="python-skills">Django</span>
                             <span class="skill-tag" data-category="python-skills">Flask</span>
-                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag" data-category="common-skills">HTML</span>
                         </div>
                     </div>
 
@@ -236,51 +248,50 @@
                         </div>
                         <h3>Embedded Systems</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">STM32</span>
-                            <span class="skill-tag">Quectel</span>
-                            <span class="skill-tag">PIC</span>
-                            <span class="skill-tag">ATmega</span>
-                            <span class="skill-tag">ESP32</span>
-                            <span class="skill-tag">GSM/GPRS</span>
-                            <span class="skill-tag">GPS</span>
-                            <span class="skill-tag">WiFi</span>
-                            <span class="skill-tag">Flash</span>
-                            <span class="skill-tag">SRAM</span>
-                            <span class="skill-tag">RTC</span>
-                            <span class="skill-tag">RF modules</span>
+                            <span class="skill-tag" data-category="embedded-skills">STM32</span>
+                            <span class="skill-tag" data-category="embedded-skills">Quectel</span>
+                            <span class="skill-tag" data-category="embedded-skills">PIC</span>
+                            <span class="skill-tag" data-category="embedded-skills">ATmega</span>
+                            <span class="skill-tag" data-category="embedded-skills">ESP32</span>
+                            <span class="skill-tag" data-category="embedded-skills">GSM/GPRS</span>
+                            <span class="skill-tag" data-category="embedded-skills">GPS</span>
+                            <span class="skill-tag" data-category="embedded-skills">WiFi</span>
+                            <span class="skill-tag" data-category="embedded-skills">Flash</span>
+                            <span class="skill-tag" data-category="embedded-skills">SRAM</span>
+                            <span class="skill-tag" data-category="embedded-skills">RTC</span>
+                            <span class="skill-tag" data-category="embedded-skills">RF modules</span>
                         </div>
                     </div>
                     <!-- cloud platforms -->
+                    <div class="skill-category" data-category="python-skills embedded-skills">
+                        <div class="skill-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Cloud Platforms</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag" data-category="python-skills embedded-skills">AWS</span>
+                            <span class="skill-tag" data-category="python-skills embedded-skills">Azure</span>
+                            <span class="skill-tag" data-category="python-skills">S3</span>
+                            <span class="skill-tag" data-category="python-skills embedded-skills">IoT Core</span>
+                            <span class="skill-tag" data-category="python-skills">DynamoDB</span>
+                            <span class="skill-tag" data-category="python-skills">Lambda</span>
+                            <span class="skill-tag" data-category="python-skills">Key Vault</span>
+                            <span class="skill-tag" data-category="python-skills">Secrets Manager</span>
+                            <span class="skill-tag" data-category="python-skills">EC2</span>
+                            <span class="skill-tag" data-category="python-skills">Function App</span>
+                            <span class="skill-tag" data-category="python-skills">SNS</span>
+                            <span class="skill-tag" data-category="python-skills">Storage Accounts</span>
+                            <span class="skill-tag" data-category="python-skills">SQS</span>
+                        </div>
+                    </div>
+                    <!-- RTOS -->
                     <div class="skill-category" data-category="embedded-skills">
                         <div class="skill-icon">
-                            <i class="fas fa-cloud"></i>
+                            <i class="fa-brands fa-ubuntu"></i>
                         </div>
-                        <h3>Cloud Platforms</h3>
+                        <h3>RTOS</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">AWS</span>
-                            <span class="skill-tag">Azure</span>
-                        </div>
-                    </div>
-                    <!-- cloud platforms -->
-                    <div class="skill-category" data-category="python-skills">
-                        <div class="skill-icon">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <h3>Cloud Platforms</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">AWS</span>
-                            <span class="skill-tag">Azure</span>
-                            <span class="skill-tag">S3</span>
-                            <span class="skill-tag">AWS IoT Core</span>
-                            <span class="skill-tag">DynamoDB</span>
-                            <span class="skill-tag">Lambda</span>
-                            <span class="skill-tag">Key Vault</span>
-                            <span class="skill-tag">Secrets Manager</span>
-                            <span class="skill-tag">EC2</span>
-                            <span class="skill-tag">Azure Function App</span>
-                            <span class="skill-tag">SNS</span>
-                            <span class="skill-tag">Storage Accounts</span>
-                            <span class="skill-tag">SQS</span>
+                            <span class="skill-tag" data-category="embedded-skills">FreeRTOS</span>
                         </div>
                     </div>
                     <!-- logging -->
@@ -290,11 +301,11 @@
                         </div>
                         <h3>Monitoring & Logging</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">Prometheus</span>
-                            <span class="skill-tag">Grafana</span>
-                            <span class="skill-tag">Azure Logs</span>
-                            <span class="skill-tag">CloudWatch</span>
-                            <span class="skill-tag">Sentry</span>
+                            <span class="skill-tag" data-category="python-skills">Prometheus</span>
+                            <span class="skill-tag" data-category="python-skills">Grafana</span>
+                            <span class="skill-tag" data-category="python-skills">Azure Logs</span>
+                            <span class="skill-tag" data-category="python-skills">CloudWatch</span>
+                            <span class="skill-tag" data-category="python-skills">Sentry</span>
                         </div>
                     </div>
                     <!-- communication protocols -->
@@ -304,52 +315,42 @@
                         </div>
                         <h3>Communication Protocols</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">SPI</span>
-                            <span class="skill-tag">I2C</span>
-                            <span class="skill-tag">UART</span>
-                            <span class="skill-tag">RS232</span>
-                            <span class="skill-tag">RS485</span>
-                            <span class="skill-tag">MQTT</span>
-                            <span class="skill-tag">TCP/IP</span>
-                            <span class="skill-tag">WiFi</span>
-                            <span class="skill-tag">Bluetooth (BLE)</span>
+                            <span class="skill-tag" data-category="embedded-skills">SPI</span>
+                            <span class="skill-tag" data-category="embedded-skills">I2C</span>
+                            <span class="skill-tag" data-category="embedded-skills">UART</span>
+                            <span class="skill-tag" data-category="embedded-skills">RS232</span>
+                            <span class="skill-tag" data-category="embedded-skills">RS485</span>
+                            <span class="skill-tag" data-category="embedded-skills">MQTT</span>
+                            <span class="skill-tag" data-category="embedded-skills">TCP/IP</span>
+                            <span class="skill-tag" data-category="embedded-skills">WiFi</span>
+                            <span class="skill-tag" data-category="embedded-skills">Bluetooth (BLE)</span>
                         </div>
                     </div>
                     <!-- software tools -->
-                    <div class="skill-category" data-category="embedded-skills">
+                    <div class="skill-category" data-category="embedded-skills python-skills">
                         <div class="skill-icon">
                             <i class="fas fa-tools"></i>
                         </div>
                         <h3>Software Tools</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">VS Code</span>
-                            <span class="skill-tag">Keil uVision</span>
-                            <span class="skill-tag">MPLAB</span>
-                            <span class="skill-tag">AVR Studio</span>
-                            <span class="skill-tag">Proteus</span>
-                            <span class="skill-tag">MATLAB</span>
-                            <span class="skill-tag">Simulink</span>
-                            <span class="skill-tag">OrCAD</span>
-                            <span class="skill-tag">EagleCAD</span>
-                            <span class="skill-tag">STM32CubeMX</span>
-                            <span class="skill-tag">Eclipse</span>
-                            <span class="skill-tag">Renode</span>
-                        </div>
-                    </div>
-                    <!-- software tools -->
-                    <div class="skill-category" data-category="python-skills">
-                        <div class="skill-icon">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <h3>Software Tools</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">VS Code</span>
-                            <span class="skill-tag">Postman</span>
-                            <span class="skill-tag">DataGrip</span>
-                            <span class="skill-tag">Sentry</span>
-                            <span class="skill-tag">MongoDB Compass</span>
-                            <span class="skill-tag">Mailjet</span>
-                            <span class="skill-tag">Sendgrid</span>
+                            <span class="skill-tag" data-category="embedded-skills python-skills">VS Code</span>
+                            <span class="skill-tag" data-category="embedded-skills">Keil uVision</span>
+                            <span class="skill-tag" data-category="embedded-skills">MPLAB</span>
+                            <span class="skill-tag" data-category="embedded-skills">AVR Studio</span>
+                            <span class="skill-tag" data-category="embedded-skills">Proteus</span>
+                            <span class="skill-tag" data-category="embedded-skills">MATLAB</span>
+                            <span class="skill-tag" data-category="embedded-skills">Simulink</span>
+                            <span class="skill-tag" data-category="embedded-skills">OrCAD</span>
+                            <span class="skill-tag" data-category="embedded-skills">EagleCAD</span>
+                            <span class="skill-tag" data-category="embedded-skills">STM32CubeMX</span>
+                            <span class="skill-tag" data-category="embedded-skills">Eclipse</span>
+                            <span class="skill-tag" data-category="embedded-skills">Renode</span>
+                            <span class="skill-tag" data-category="python-skills">Postman</span>
+                            <span class="skill-tag" data-category="python-skills">DataGrip</span>
+                            <span class="skill-tag" data-category="python-skills">Sentry</span>
+                            <span class="skill-tag" data-category="python-skills">MongoDB Compass</span>
+                            <span class="skill-tag" data-category="python-skills">Mailjet</span>
+                            <span class="skill-tag" data-category="python-skills">Sendgrid</span>
                         </div>
                     </div>
                     <!-- messaging protocols -->
@@ -359,10 +360,10 @@
                         </div>
                         <h3>Messaging Protocols</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">MQTT</span>
-                            <span class="skill-tag">Apache Kafka</span>
-                            <span class="skill-tag">RabbitMQ</span>
-                            <span class="skill-tag">Redis</span>
+                            <span class="skill-tag" data-category="python-skills">MQTT</span>
+                            <span class="skill-tag" data-category="python-skills">Apache Kafka</span>
+                            <span class="skill-tag" data-category="python-skills">RabbitMQ</span>
+                            <span class="skill-tag" data-category="python-skills">Redis</span>
                         </div>
                     </div>
                     <!-- database tool -->
@@ -372,9 +373,9 @@
                         </div>
                         <h3>Databases</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">DynamoDB</span>
-                            <span class="skill-tag">MongoDB</span>
-                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag" data-category="python-skills">DynamoDB</span>
+                            <span class="skill-tag" data-category="python-skills">MongoDB</span>
+                            <span class="skill-tag" data-category="python-skills">PostgreSQL</span>
                         </div>
                     </div>
                     <!-- Debugging tool -->
@@ -384,14 +385,14 @@
                         </div>
                         <h3>Hardware Debugging Tools</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">Oscilloscopes</span>
-                            <span class="skill-tag">Multimeters</span>
-                            <span class="skill-tag">Logic Analyzers</span>
-                            <span class="skill-tag">Soldering Skills</span>
+                            <span class="skill-tag" data-category="embedded-skills">Oscilloscopes</span>
+                            <span class="skill-tag" data-category="embedded-skills">Multimeters</span>
+                            <span class="skill-tag" data-category="embedded-skills">Logic Analyzers</span>
+                            <span class="skill-tag" data-category="embedded-skills">Soldering Skills</span>
                         </div>
                     </div>
                     <!-- version control -->
-                    <div class="skill-category" data-category="common">
+                    <div class="skill-category" data-category="common-skills">
                         <div class="skill-icon">
                             <i class="fab fa-git-alt"></i>
                         </div>
@@ -402,7 +403,7 @@
                         </div>
                     </div>
                     <!-- project management -->
-                    <div class="skill-category" data-category="common">
+                    <div class="skill-category" data-category="common-skills">
                         <div class="skill-icon">
                             <i class="fas fa-tasks"></i>
                         </div>
@@ -429,7 +430,7 @@
                             <h4>Viral Nation, Toronto, ON</h4>
                             <ul>
                                 <li>Designed and developed robust data ingestion microservices for third-party APIs.</li>
-                                <li>Built scalable ETL pipelines to transform and store structured/unstructured data.</li>
+                                <li>Built scalable ETL pipelines to transform and store structured / unstructured data.</li>
                                 <li>Led the architecture designing of a time-series database solution for real-time data tracking.</li>
                                 <li>Developed serverless applications using AWS Lambda, Step Functions and Azure Function Apps.</li>
                                 <li>Created logging and monitoring infrastructure using Prometheus and Grafana.</li>
