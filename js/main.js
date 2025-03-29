@@ -14,20 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
     });
 
-    // const burger_icon = document.querySelector('.burger');
-    // burger_icon.onclick = function() {
-    //         this.classList.toggle('active');
-    //         navMenu.classList.toggle('nav-active');
-    //     };
-
-    // Close menu when clicking outside
-    // document.addEventListener('click', function(event) {
-    //     if (!event.target.closest('.nav-menu') && !event.target.closest('.menu-toggle')) {
-    //         navMenu.classList.remove('nav-active');
-    //         burger.classList.remove('active');
-    //     }
-    // });
-
     // Close navbar when a link is clicked (mobile)
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
