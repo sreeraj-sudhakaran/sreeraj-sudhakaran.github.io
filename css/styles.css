@@ -1061,6 +1061,16 @@ nav {
     object-fit: cover;
 }
 
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    cursor: pointer;
+}
+
 #dynamic-title {
     display: inline; /* Keep the title inline for better typing effect */
     border-right: 2px solid; /* Cursor effect */
