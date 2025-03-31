@@ -415,3 +415,6 @@ function generateCodeLines() {
 
 generateCodeLines();
 
+function openGoogleMaps() {
+    window.open("https://maps.app.goo.gl/K323jJscyrCwSC8S6", "_blank");
+}
