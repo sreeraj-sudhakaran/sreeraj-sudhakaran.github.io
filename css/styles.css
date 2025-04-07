@@ -28,13 +28,16 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
+    min-width: 320px;
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    /* padding: 0 20px; */
+    padding: 0 clamp(10px, 4vw, 20px); /* Adjusts padding based on viewport width */
+    min-width: 320px;
 }
 
 section {
