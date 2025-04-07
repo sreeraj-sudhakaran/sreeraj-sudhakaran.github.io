@@ -71,5 +71,7 @@ You can use this template to:
 ## 📄 License
 
 This project is open-source and available under the MIT License.
+> ⚠️ However, all personal content (including text, images, resume, and contact details) is protected and may not be reused or reproduced without permission.
+
 
     Built with ❤️ and pure HTML/CSS/JS
