@@ -1,15 +1,15 @@
-# 💼 Personal Portfolio Website
+# Personal Portfolio Website
 
 This is a responsive and interactive personal portfolio website built with HTML, CSS, and JavaScript. It showcases your professional profile, skills, and projects with a clean design and typewriter animation effect.
 
-## 🔗 Live Demo
+## Live Demo
 
-[View Portfolio Live](https://sreeraj-sudhakaran.github.io/)  
+[View Portfolio Live](https://sreeraj-sudhakaran.github.io/?utm_source=readme)  
 
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 
     project/ 
     │ 
@@ -22,7 +22,7 @@ This is a responsive and interactive personal portfolio website built with HTML,
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **HTML5** – Markup and structure
 - **CSS3** – Styling, layout, typewriter animation
@@ -30,16 +30,16 @@ This is a responsive and interactive personal portfolio website built with HTML,
 
 ---
 
-## ✨ Features
+## Features
 
-- 🧑‍💼 Clean and professional layout
-- 🖋️ Smooth typewriter animation
-- 🎯 Focus on readability and responsiveness
-- ⚙️ Organized file structure for scalability
+- Clean and professional layout
+- Smooth typewriter animation
+- Focus on readability and responsiveness
+- Organized file structure for scalability
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 To run the project locally:
 
@@ -50,7 +50,7 @@ To run the project locally:
 
 Open in browser: Simply open index.html in your preferred web browser.
 
-## 📝 Customization
+## Customization
 
     Text & Sections: Edit index.html to update content like your name, bio, and links.
 
@@ -58,7 +58,7 @@ Open in browser: Simply open index.html in your preferred web browser.
 
     Typewriter Content: Update the texts array in main.js to personalize the typewriter phrases.
 
-## 💡 Example Usage
+## Example Usage
 
 You can use this template to:
 
@@ -68,7 +68,7 @@ You can use this template to:
 
     Showcase your projects
 
-## 📄 License
+## License
 
 This project is open-source and available under the MIT License.
 > ⚠️ However, all personal content (including text, images, resume, and contact details) is protected and may not be reused or reproduced without permission.
