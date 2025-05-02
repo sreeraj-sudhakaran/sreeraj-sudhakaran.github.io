@@ -14,10 +14,10 @@ This is a responsive and interactive personal portfolio website built with HTML,
     project/ 
     │ 
     ├── css/ 
-    │ └── styles.css # Custom styles and animations 
+    │ └── styles.css
     ├── js/ 
-    │ └── main.js # Typewriter effect logic 
-    └── index.html # Main webpage structure
+    │ └── main.js
+    └── index.html
 
 
 ---
