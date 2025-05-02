@@ -24,9 +24,9 @@ This is a responsive and interactive personal portfolio website built with HTML,
 
 ## Tech Stack
 
-- **HTML5** – Markup and structure
-- **CSS3** – Styling, layout, typewriter animation
-- **JavaScript (Vanilla JS)** – DOM manipulation for typewriter text animation
+- **HTML5**
+- **CSS3**
+- **JavaScript (Vanilla JS)**
 
 ---
 
